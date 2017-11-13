@@ -1,0 +1,30 @@
+
+cc_library(
+	name = "msm",
+	visibility = ["//visibility:public"],
+	includes = [
+		"include/",
+	],
+	hdrs = glob([
+		"include/boost/**/*.hpp",
+		"include/boost/**/*.ipp",
+	]),
+	srcs = [
+	],
+	defines = [
+	],
+	deps = [
+		"@com_github_bazelboost_preprocessor//:preprocessor",
+		"@com_github_bazelboost_tuple//:tuple",
+		"@com_github_bazelboost_mpl//:mpl",
+		"@com_github_bazelboost_circular_buffer//:circular_buffer",
+		"@com_github_bazelboost_detail//:detail",
+		"@com_github_bazelboost_any//:any",
+		"@com_github_bazelboost_config//:config",
+		"@com_github_bazelboost_typeof//:typeof",
+		"@com_github_bazelboost_phoenix//:phoenix",
+		"@com_github_bazelboost_type_traits//:type_traits",
+		"@com_github_bazelboost_assert//:assert",
+		"@com_github_bazelboost_proto//:proto"
+	],
+)
